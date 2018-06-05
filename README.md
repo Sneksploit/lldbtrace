@@ -32,6 +32,8 @@ The resulting traces are dumped to cwd/lldbtrace_outputs/
 You can continue lldb to continue tracing, and run the dumpbreaks command every time you want to dump the output.
 
 ## Limitations
+- The process will slow down considerably during trace, this is unavoidable unless you use hardware breakpoints, and then you're limited to 4 functions.
+
 - The output is just the raw addresses of the functions, I haven't resymbolicated them. Eventually I'd like it to support symbol information via a dSYM file as well.
 
 - Output csv files still have the python array markup, i.e. square brackets and single quotes. If this is a problem let me know what formats you would prefer.
