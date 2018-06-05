@@ -1,0 +1,5 @@
+script quit
+command script import ./breakscript.py
+setbreaks -i ./lldbtrace_sym.txt
+continue
+dumpbreaks
